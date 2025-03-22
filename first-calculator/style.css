@@ -1,20 +1,37 @@
-
-button {
-  background-color: #f5651d;
-  color: white;
-  border-radius: 5px;
-  width: 10%;
-  height: 50px;
-  border-color: #f5651d;
-  
-
-}
 body {
   background-color: #212121;
 
 }
+
 p {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+h1 {
+  color: white;
+  font-size: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-size: 3em;
+  background-color: #f5651d;
+  color: white;
+  border-color: #f5651d;
+
+  border-radius: 5px;
+  width: 150px;
+  height: 100px;
+  
+  margin-left: 5px;
+  margin-right: 5px;
+  
+
 }
