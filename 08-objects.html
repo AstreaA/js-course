@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Objects</title>
+  </head>
+  <body>
+      <script>
+        
+        const product = {
+          name: 'socks', 
+          price: 1090
+        };
+        
+        console.log(product); // {name: 'socks', price: 1090}
+        console.log(product.name); // socks
+
+        product.name = 'cotton socks'; // меняет переменную в свойстве name
+
+        product.newProperty = true; // добавляет новое свойство со значением в объект
+        console.log(product) // {name: 'socks', price: 1090, newProperty: true}
+
+        delete product.newProperty; // удалит свойство со значением в объекте
+      
+
+        const product2 = {
+          name: 'shirt',
+          [delivery-time]: '1 day',
+          rating: {
+            stars: 4.5,
+            count: 87
+          },
+          fun: function function1() {               // функцию внутри объекта 
+            console.log('function inside object')   // называют методом
+          } 
+        };
+        console.log(product2);
+        console.log(product2.name);
+
+        console.log(product2['name']) // можно использовать для свойств которые в названии например содержат - или еще какие-то знаки, которые будут неправильно понимвться компьютером, также с такой записью можно проделывать математические операции
+        
+
+        const newJson = JSON.stringify(product2); //переведет наш объект в формат JSON (но при этом полученый JSON будет являться строкой
+        console.log(typeof JSON.stringify(product2)); //string
+
+        JSON.parse(newJson); //тут мы на выходе уже получим привыйчный нам объект
+
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase);
+
+
+        const object1 = {         // тут после равно компьютер считает что ему пишут ссылку на 
+          message: 'hello'        // ячейку в памяти
+        };
+        const object2 = object1;  // именно поэтому тут присвается object2 путь до ячейки в памяти, которая содержит в себе свойства из object1
+
+        object1.message('Good job!'); // после этой команды поменяется содержимое в ячейке памяти, поэтому и в object2 тоже поменяется свойство
+
+        const object3 = {
+          message: 'Good job!'
+        };
+
+        console.log(object1 === object3); // false, потому что сравниваютс пути, а не содержимое
+        console.log(object2 === object1); // true, так пути у них к одной и той же ячейке
+
+        const object4 = {
+          message: 'Good job!'
+        };
+        //const message = object4.message;
+        const { message } = object4; //деструктуризация, по сути тут написано то же самое что и на строке выше, что тут произошло: получается что мы свойство из объекта превратили в обычную переменную(константу)
+        
+        // ниже пример как можно из объекта вытащить несколько свойств
+
+        const object5 = {
+          message2: 'hello',
+          price: 567
+        };
+        const { message2, price } = object5; // получится что в первую переменную запишется первое свойство, во вторую второе
+
+        //shorthand method это короче, вот так можно делать
+        const object6 = {
+          //message: message
+          message,             //на строке выше написано тоже самое, но тут мы записали короче, то есть свойство, которое имеет такое же название как и переменная, которая хранится в нем, то можно вот так вот сократить
+
+          /*
+          method: function func () {
+            console.log('Good job!');
+          }
+          */
+          
+          // короткая запись того, что выше
+          method () {
+            console.log('Good job!');
+          }
+        }
+
+        
+
+
+
+      </script>
+  </body>
+</html>

@@ -11,96 +11,103 @@
       <p>
         <button
         onclick="
-        calculation +='1';
+        updateCalculator('1');
         ">1</button>
     
         <button
         onclick="
-        calculation +='2';
+        updateCalculator('2');
         ">2</button>
     
         <button
         onclick="
-        calculation +='3';
+        updateCalculator('3');
         ">3</button>
     
         <button
         onclick="
-        calculation +='+';
+        updateCalculator('+');
         ">+</button>
       </p>
   
       <p>
         <button
         onclick="
-        calculation +='4';
+        updateCalculator('4');
         ">4</button>
   
         <button
         onclick="
-        calculation +='5';
+        updateCalculator('5');
         ">5</button>
   
         <button
         onclick="
-        calculation +='6';
+        updateCalculator('6');
         ">6</button>
   
         <button
         onclick="
-        calculation +='-';
+        updateCalculator('-');
         ">-</button>
       </p>
   
       <p>
         <button
         onclick="
-        calculation +='7';
+        updateCalculator('7');
         ">7</button>
   
         <button
         onclick="
-        calculation +='8';
+        updateCalculator('8');
         ">8</button>
   
         <button
         onclick="
-        calculation +='9';
+        updateCalculator('9');
         ">9</button>
   
         <button
         onclick="
-        calculation +='*';
+        updateCalculator('*');
         ">*</button>
       </p>
   
       <p>
         <button
         onclick="
-        calculation +='0';
+        updateCalculator('0');
         ">0</button>
   
         <button
         onclick="
-        calculation +='.';
+        updateCalculator('.');
         ">.</button>
   
         <button
         onclick="
-        calculation +='/';
+        updateCalculator('/');
         ">/</button>
   
         <button
         onclick="
         console.log(eval(calculation));
         calculation = '';
+        localStorage.setItem('calculation', calculation)
         ">=</button>
       </p>
     </div>
-    <p>!The answer you can find in console!</p>
+    <p>The answer you can find in console</p>
 
     <script>
-      let calculation = '';
+      let calculation = '' || localStorage.getItem('calculation');
+
+      function updateCalculator(symbol) {
+        calculation += symbol;
+        console.log(calculation);
+        localStorage.setItem('calculation', calculation)
+      }
     </script>
 
   </body>

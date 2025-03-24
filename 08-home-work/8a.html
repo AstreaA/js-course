@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Homework lesson 8
+        </title>
+        
+    </head>
+    <body>
+        
+
+        <script>
+          // Exercise 8a
+          const amazonProduct = {
+            productName: 'basketball',
+            price: 2095
+          };
+          console.log(`The product: ${amazonProduct.productName} The price: ${amazonProduct.price}`);
+
+          // Exercise 8b
+          amazonProduct.price += 500;
+          console.log(`New price the product: ${amazonProduct.price}`);
+
+          // Exercise 8c
+          amazonProduct["delivery-time"] = "3 days";
+          console.log(amazonProduct);
+          
+          // Exercise 8d
+          const product1 = {
+            product: 'ball',
+            price: 2034
+          };
+          const product2 = {
+            product: 'dall',
+            price: 3456
+          };
+          function lessExpensive(product1,product2) {
+            if (product1.price > product2.price) {
+              return product2.product;
+            }
+            else if (product1.price < product2.price) {
+              return product1.product;
+            }
+            else {
+              return product1.product, product2.product;
+            }
+          }
+          console.log(lessExpensive(product1, product2));
+        </script>
+    </body>
+    
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Rock Paper Scissors
+        </title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <p>Rock Paper Scissors</p>
+        <p>
+            <button onclick="
+                randomNumber = Math.random();
+                
+                if (randomNumber>= 0 && randomNumber < 1/3) {
+                    computerMove = 'Rock';
+                    result = 'Nonce';
+                    
+                }
+                else if (randomNumber >= 1/3 && randomNumber <2/3) {
+                    computerMove = 'Paper';
+                    result = 'You Lose';
+                }
+                else if (randomNumber >= 2/3 && randomNumber <= 1) {
+                    computerMove = 'Scissors';
+                    result = 'You win!';
+                }
+                alert(`You picked Rock. Computer picked ${computerMove}. ${result}`)
+            ">Rock</button>
+
+            <button onclick="
+                randomNumber = Math.random();
+                
+                if (randomNumber>= 0 && randomNumber < 1/3) {
+                    computerMove = 'Rock';
+                    result = 'You win!';
+                    
+                }
+                else if (randomNumber >= 1/3 && randomNumber <2/3) {
+                    computerMove = 'Paper';
+                    result = 'Nonce';
+                }
+                else if (randomNumber >= 2/3 && randomNumber <= 1) {
+                    computerMove = 'Scissors';
+                    result = 'You Lose';
+                }
+                alert(`You picked Paper. Computer picked ${computerMove}. ${result}`)
+            ">Paper</button>
+
+            <button onclick="
+                randomNumber = Math.random();
+                
+                if (randomNumber>= 0 && randomNumber < 1/3) {
+                    computerMove = 'Rock';
+                    result = 'You Lose';
+                    
+                }
+                else if (randomNumber >= 1/3 && randomNumber <2/3) {
+                    computerMove = 'Paper';
+                    result = 'You win!';
+                }
+                else if (randomNumber >= 2/3 && randomNumber <= 1) {
+                    computerMove = 'Scissors';
+                    result = 'Nonce';
+                }
+                alert(`You picked Scissors. Computer picked ${computerMove}. ${result}`)
+            ">Scissors</button>
+        </p>
+      <script>
+        let randomNumber = Math.random();
+        let computerMove = '';
+        let result = '';
+
+      </script>
+    </body>
+    
+</html>
