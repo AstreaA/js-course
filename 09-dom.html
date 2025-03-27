@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>DOM</title>
+  </head>
+  <body>
+      <button>
+        hello
+      </button>
+
+      <button class="js-button">
+        Second Button
+      </button>
+      <script>
+
+        document.querySelector('button') // тут мы грубо говаря из HTML вытянули элемент в JS и теперь тут можем работать с ним
+        console.log(document.querySelector('button').innerHTML) // hello то есть получим содержимое нашей кнопки
+
+        console.log(document.querySelector('.js-button').innerHTML) // тут мы обращаемся к элементу HTML по классу и выводим содержимое
+
+
+        /*
+        console.log(document.title) // DOM
+        document.title = 'Chenge'  // мы таким образом меняем тайтл кодом JS
+
+        console.log(document.body) // тут вообще прикол, мы в консольвыводим HTML элемент со всем его содержимым
+
+        console.log(typeof document.body) // object
+
+        console.log(document.body.innerHTML) // выведется все что написано в body (вполне возиожно что в строковом формате)
+
+        document.body.innerHTML = 'Chenged' //после этого в body осталось только строка Chenged
+
+        document.body.innerHTML = '<button></button>' // вот так придумали кнопку
+        */
+      </script>
+  </body>
+</html>
