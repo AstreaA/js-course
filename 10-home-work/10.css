@@ -1,0 +1,51 @@
+
+.follow-button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #c146e0;
+  color: white;
+  border: none;
+
+  border-radius: 10px;
+
+  width: 200px;
+  height: 70px;
+
+  margin-left: 600px;
+
+  font-size: 2em;
+  cursor: pointer;
+}
+.following-button {
+  background-color: #eca9fc;
+  
+}
+
+.amazon-button {
+  background-color: rgb(255, 216, 20);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border: none;
+  border-radius: 20px;
+
+  margin: 20px 625px;
+
+  width: 150px;
+  height: 30px;
+}
+
+.toggle-button {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.is-toggled {
+  background-color: black;
+  color: white;
+}
+
+
