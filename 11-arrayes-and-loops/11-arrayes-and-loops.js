@@ -1,3 +1,5 @@
+
+/*
 const myArray = [
   10,
   30,
@@ -76,7 +78,7 @@ for (let i = 0; i < nums.length; i++) {
 }
 console.log(numsDoubled);
 
-
+*/
 //homework
 
 const homeArray = [10, 20, 30];
@@ -206,3 +208,67 @@ function countWords(array) {
 }
 
 console.log(countWords(['hello', 'hi', 'good', 'hi']));
+
+
+//more details about arrays
+
+/*
+const array1 = [1, 2, 3];
+const array2 = array1;
+array2.push(4);
+
+console.log(array2); // [1, 2, 3, 4]
+console.log(array1); // [1, 2, 3, 4]
+*/
+// если мы хотим создать массив со значениями другого массива, но не брать ячейку памяти:
+
+const array1 = [1, 2, 3];
+const array2 = array1.slice();
+array2.push(4);
+
+console.log(array2); // [1, 2, 3, 4]
+console.log(array1); // [1, 2, 3]
+
+const { firstValue, secondValue } = [1, 2, 3]; // после такого первое значение будет равно 1, второе значение будет равно двум
+
+//more details about loops
+/*
+for (i = 0; i <= 10; i++) {
+  if ( i % 3 === 0) {
+    continue;
+  }
+  
+  console.log(i);
+
+  if (i === 8) {
+    break;
+  }
+}
+
+let i = 0;
+while (i <= 0) {
+  if (i % 3 === 0) {
+    i++;
+    continue;
+  }
+  console.log(i);
+  i++
+}
+*/
+function doubledArrays(nums) {
+  const numsDoubled = [];
+  
+
+  for (let i = 0; i < nums.length; i++) {
+    let value = nums[i];
+    if (value === 0) {
+      return numsDoubled;
+    }
+    numsDoubled.push(value * 2);
+  }
+  return numsDoubled;
+}
+
+console.log(doubledArrays([1, 2, 3]));
+console.log(doubledArrays([1, 2, ,0, 5, 5]));
+
